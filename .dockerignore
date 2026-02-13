@@ -1,0 +1,28 @@
+# Exclude everything related to Git
+.git/
+
+# Exclude dependencies and virtual environments
+.venv/
+
+# Exclude Python artifacts
+**/__pycache__/
+*.py[cod]
+*$py.class
+
+# Exclude testing artifacts
+.pytest_cache/
+tests/
+test_output.txt
+test_results.txt
+
+# Exclude Docker and local tool artifacts
+Dockerfile
+.dockerignore
+.gitignore
+uv.lock
+.python-version
+
+# Exclude project documentation
+agent.md
+PROGRESS.md
+README.md

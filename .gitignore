@@ -1,0 +1,22 @@
+# Python
+**/__pycache__/
+*.py[cod]
+*$py.class
+
+# Environment
+.venv/
+.env
+.python-version
+
+# Testing
+.pytest_cache/
+test_output.txt
+test_results.txt
+
+# IDE
+.vscode/
+.idea/
+
+# Project Specific
+agent.md
+PROGRESS.md
