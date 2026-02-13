@@ -2,6 +2,8 @@
 
 An MCP server that enables AI assistants to estimate Google Cloud costs, powered by Cloud Billing Catalog API and built with Python.
 
+Inspired from https://github.com/nozomi-koborinai/gcp-cost-mcp-server who built this is GoLang
+
 ## Description
 This project is a Python port of the [gcp-cost-mcp-server](https://github.com/nozomi-koborinai/gcp-cost-mcp-server). It provides tools to interact with Google Cloud's pricing data and estimate costs, including automatic free tier deductions.
 

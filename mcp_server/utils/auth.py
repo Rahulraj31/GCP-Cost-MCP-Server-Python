@@ -1,4 +1,6 @@
 import google.auth
+from google.auth.transport.requests import Request
+import httpx
 import re
 from httpx import AsyncClient
 
@@ -11,7 +13,7 @@ async def get_authenticated_client() -> AsyncClient:
     )
     
     # Refresh credentials if necessary
-    auth_req = google.auth.transport.requests.Request()
+    auth_req = Request()
     if not credentials.valid:
         credentials.refresh(auth_req)
         
@@ -22,7 +24,7 @@ async def get_authenticated_client() -> AsyncClient:
 
         def auth_flow(self, request):
             if not self.credentials.valid:
-                self.credentials.refresh(google.auth.transport.requests.Request())
+                self.credentials.refresh(Request())
             request.headers["Authorization"] = f"Bearer {self.credentials.token}"
             yield request
 
